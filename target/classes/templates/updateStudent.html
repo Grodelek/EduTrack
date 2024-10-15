@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1 class="text-center">Add Student</h1>
-    <h2 class="text-center">Form</h2>
+    <h1 class="text-center">Update Student</h1>
     <div class="stdnt-form">
-        <form th:action="@{/students/add}" th:object="${student}" method="post">
+        <form th:action="@{/students/update}" th:object="${student}" method="post">
             <div class="form-group">
+                <input type="hidden" th:field="*{id}" />
             <p class="text-center">First name: <input class="form-control" type="text" th:field="*{firstName}" /></p>
             <p class="text-center">Last name: <input class="form-control" type="text" th:field="*{lastName}" /></p>
             <p class="text-center">Email: <input class="form-control" type="text" th:field="*{email}" /></p>
